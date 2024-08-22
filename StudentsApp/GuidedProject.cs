@@ -21,11 +21,21 @@ namespace StudentsApp
 
             // Student names
             string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
+            int[] studentScores = new int[10]; 
 
             foreach (string name in studentNames)
             {
-                if (name == "Sophia")
-                {
+                string currentStudent = name;
+                if (currentStudent == "Sophia")
+                    studentScores = sophiaScores;
+                else if (currentStudent == "Andrew")
+                    studentScores = andrewScores;
+                else if (currentStudent == "Emma")
+                    studentScores = emmaScores;
+                else if (currentStudent == "Logan")
+                    studentScores = loganScores;
+
+
                     int sophiaSum = 0;
                     decimal sophiaScore;
 
@@ -39,7 +49,8 @@ namespace StudentsApp
 
                     Console.WriteLine("Student\t\tGrade\n");
                     Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
-                }
+                
+
             }
 
             Console.WriteLine("Press the Enter key to continue");
